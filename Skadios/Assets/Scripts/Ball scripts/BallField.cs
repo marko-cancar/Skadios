@@ -13,6 +13,7 @@ public class BallField
 		this.Row = row;
 		this.Column = column;
 
+		//TODO: Test.
 		//TODO: GameObject positioning. All spawn on the same point
 		this.ball = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/BallPrefab")) as GameObject;
 		this.Ball = ball.GetComponent<Ball>();
