@@ -8,8 +8,8 @@ public class Ball : MonoBehaviour
 	private static float moveOffsetX = 0f;
 	private static float moveOffsetY = 0f;
 	private const float animationDuration = 0.3f;
-
 	private Color ballColor;
+
 	public Color BallColor
 	{
 		get{
@@ -22,26 +22,14 @@ public class Ball : MonoBehaviour
 		}
 	}
 
-	/* REMAINDER: NEVER USE CONSTRUCTORS IF THE CLASS INHERITS MONOBEHAVIOUR
-	 * PROOF: http://docs.unity3d.ru/ScriptReference/index.Writing_Scripts_in_Csharp.html
-	 * public Ball ()
+	public void Initialize (Color color,Vector2 position)
 	{
-		BallColor = Color.yellow;
-	}
-
-	public Ball (Color initialColor)
-	{
-		BallColor = initialColor;
-	}*/
-
-	public void Initialize (Color color)
-	{
-		BallColor = color;
+		this.BallColor = color;
+		transform.position = position;
 	}
 
 	void Start ()
 	{
-
 	}
 
 	void Update () 

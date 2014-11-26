@@ -34,7 +34,7 @@ public class BallsBoard : MonoBehaviour
 		this.fields = new BallField[GridSize, GridSize];
 		for (int i = 0; i < GridSize; i++) {
 			for (int j = 0; j < GridSize; j++) {
-				this.fields [i, j] = new BallField (i, j);
+				this.fields [i, j] = new BallField (i, j, i + j == 9 ? true : false);
 			}
 		}
 	}
